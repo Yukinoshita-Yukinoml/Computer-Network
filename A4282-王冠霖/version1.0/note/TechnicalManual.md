@@ -22,14 +22,13 @@
 [//]: <> "这种方法可能会造成不平行于屏幕拍摄时解析错误或者解析不出来的问题."
 
 **代码示例:**
-
->//以绘制左上角代码为例
->&emsp;rectangle(image, Point(0, 0), Point(LOCATION_POINT_WIDTH, LOCATION_POINT_WIDTH), WHITE, FILLED);
->&emsp;rectangle(image, Point(0, 0), Point(LOCATION_POINT_WIDTH - BLOCK_WIDTH, LOCATION_POINT_WIDTH - BLOCK_WIDTH), BLACK, FILLED);
->&emsp;rectangle(image, Point(BLOCK_WIDTH, BLOCK_WIDTH), Point(LOCATION_POINT_WIDTH - BLOCK_WIDTH * 2, LOCATION_POINT_WIDTH - BLOCK_WIDTH * 2), WHITE, FILLED);
->&emsp;rectangle(image, Point(BLOCK_WIDTH * 2, BLOCK_WIDTH * 2), Point(LOCATION_POINT_WIDTH - BLOCK_WIDTH * 3, LOCATION_POINT_WIDTH - BLOCK_WIDTH * 3), BLACK, FILLED);
-
-
+``` c++
+//以绘制左上角代码为例
+rectangle(image, Point(0, 0), Point(LOCATION_POINT_WIDTH, LOCATION_POINT_WIDTH), WHITE, FILLED);
+rectangle(image, Point(0, 0), Point(LOCATION_POINT_WIDTH - BLOCK_WIDTH, LOCATION_POINT_WIDTH - BLOCK_WIDTH), BLACK, FILLED);
+rectangle(image, Point(BLOCK_WIDTH, BLOCK_WIDTH), Point(LOCATION_POINT_WIDTH - BLOCK_WIDTH * 2, LOCATION_POINT_WIDTH - BLOCK_WIDTH * 2), WHITE, FILLED);
+rectangle(image, Point(BLOCK_WIDTH * 2, BLOCK_WIDTH * 2), Point(LOCATION_POINT_WIDTH - BLOCK_WIDTH * 3, LOCATION_POINT_WIDTH - BLOCK_WIDTH * 3), BLACK, FILLED);
+```
 
 &emsp; &emsp; 4.[绘制数据区]  将二进制文件中的0-1视作黑-白像素(通过枚举类型), 两层for循环代表行和列, 借助OpenCV库逐行输出数据对应的(~~像素~~)<font color = Red>正方形色块</font>  <font color = Gray> *(因为输出像素得到的图案实在太小)* </font> 得到二维码. </br>
 
