@@ -1,0 +1,2 @@
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\x64\Debug\GenerateQrCode.exe
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\x64\Debug\GenerateQrCode.pdb

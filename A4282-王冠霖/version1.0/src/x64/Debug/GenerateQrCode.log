@@ -1,0 +1,65 @@
+﻿  Encoder.cpp
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(7,32): warning C4244: “初始化”: 从“double”转换到“size_t”，可能丢失数据
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(42,50): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(108,83): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(108,156): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(110,83): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(110,159): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(119,83): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(119,159): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(121,83): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(121,159): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(130,117): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(130,229): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(132,119): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(132,231): warning C4267: “参数”: 从“size_t”转换到“_Tp”，可能丢失数据
+          with
+          [
+              _Tp=int
+          ]
+D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\Encoder.cpp(196,13): warning C4244: “return”: 从“double”转换到“int”，可能丢失数据
+  GenerateQrCode.vcxproj -> D:\计算机资料\计算机网络\计算机网络 项目库\Project01\GenerateQrCode\x64\Debug\GenerateQrCode.exe
