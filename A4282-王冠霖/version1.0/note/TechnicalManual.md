@@ -2,8 +2,10 @@
 
 
 ## 环境配置
-[配置OpenCV库到VS2019](opencv https://www.jb51.net/article/184819.htm) </br>
+
+[配置OpenCV库到VS2019](https://www.jb51.net/article/184819.htm) </br>
  &emsp; *注意版本问题*
+ 
 ----------
 
 # 编码部分</br>
@@ -32,16 +34,17 @@
 &emsp; &emsp; 4.[绘制数据区]  将二进制文件中的0-1视作黑-白像素(通过枚举类型), 两层for循环代表行和列, 借助OpenCV库逐行输出数据对应的(~~像素~~)<font color = Red>正方形色块</font>  <font color = Gray> *(因为输出像素得到的图案实在太小)* </font> 得到二维码. </br>
 
 **代码示例:**
-
->// 以绘制数据区1(最上面的数据区)为例
-> for (size_t y = 0; y < blocks_1_y; y++){
->&emsp; for (size_t x = 0; x < blocks_1_x ; x++){
->&emsp; &emsp;if (bin_array[++count_blocks])//判断读入二进制文件是0还是1, 如果是1则在对应的地方画黑色正方形, 否则画白色正方形
->&emsp; &emsp;&emsp; rectangle(image, Point(LOCATION_POINT_WIDTH + x * BLOCK_WIDTH, y * BLOCK_WIDTH), Point(LOCATION_POINT_WIDTH + (x+1) * BLOCK_WIDTH , (y+1) * BLOCK_WIDTH), BLACK, FILLED);
->&emsp; &emsp;else
->&emsp; &emsp;&emsp;rectangle(image, Point(LOCATION_POINT_WIDTH + x * BLOCK_WIDTH, y * BLOCK_WIDTH), Point(LOCATION_POINT_WIDTH + (x + 1) * BLOCK_WIDTH, (y + 1) * BLOCK_WIDTH), WHITE, FILLED);
->&emsp; &emsp;}//行
->}//列
+``` c++
+// 以绘制数据区1(最上面的数据区)为例
+for (size_t y = 0; y < blocks_1_y; y++){
+	for (size_t x = 0; x < blocks_1_x ; x++){
+		if(bin_array[++count_blocks])//判断读入二进制文件是0还是1, 如果是1则在对应的地方画黑色正方形, 否则画白色正方形
+			rectangle(image, Point(LOCATION_POINT_WIDTH + x * BLOCK_WIDTH, y * BLOCK_WIDTH), Point(LOCATION_POINT_WIDTH + (x+1) * BLOCK_WIDTH , (y+1) * BLOCK_WIDTH), BLACK, FILLED);
+		else
+			rectangle(image, Point(LOCATION_POINT_WIDTH + x * BLOCK_WIDTH, y * BLOCK_WIDTH), Point(LOCATION_POINT_WIDTH + (x + 1) * BLOCK_WIDTH, (y + 1) * BLOCK_WIDTH), WHITE, FILLED);
+	}//行
+}//列
+```
 
 &emsp; &emsp; 5.[绘制多张二维码]  根据视频长度以及帧率绘制相应数量的二维码到指定路径, 需要注意的是**帧率的选择**, 我们应该重复编码, 即多次绘制同一张二维码以便转成视频时正确显示.</br>
 
@@ -64,19 +67,21 @@
 - 其余部分只需要按照文件操作打开, 再调用opencv库函数即可解决.</br>
 
 代码示例:
-> 	VideoWriter video(img_path, CAP_OPENCV_MJPEG, 1.0, Size(1080, 1080));
->	//第一个参数表示读取的视频帧所存放的新的文件
->	//第二个参数指的是视频存放的编码格式
->	//fps表示每秒的帧数
->	//size表示图像的长宽大小
->	vector<String> img;
->	glob(img_path, img, false);//遍历文件夹下的所有图片
->	size_t count = img.size();
->	for (size_t i = 0; i < count; i++){
->		Mat image = imread(img[i]);
->		resize(image, image, Size(1080, 1080));//resize函数改变图像大小
->		video << image;
->	}
+``` c++
+ 	VideoWriter video(img_path, CAP_OPENCV_MJPEG, 1.0, Size(1080, 1080));
+	//第一个参数表示读取的视频帧所存放的新的文件
+	//第二个参数指的是视频存放的编码格式
+	//fps表示每秒的帧数
+	//size表示图像的长宽大小
+	vector<String> img;
+	glob(img_path, img, false);//遍历文件夹下的所有图片
+	size_t count = img.size();
+	for (size_t i = 0; i < count; i++){
+		Mat image = imread(img[i]);
+		resize(image, image, Size(1080, 1080));//resize函数改变图像大小
+		video << image;
+	}
+```
 
 ### Q&A:</br>
 &emsp; 如何提高信噪比?
